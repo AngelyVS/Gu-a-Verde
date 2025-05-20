@@ -1,0 +1,150 @@
+/* Estilos para la página Mi Jardín */
+
+.jardin-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.jardin-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.jardin-header p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+}
+
+.plantas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.planta-card {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.planta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.planta-imagen {
+  height: 200px;
+  overflow: hidden;
+}
+
+.planta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.planta-card:hover .planta-imagen img {
+  transform: scale(1.05);
+}
+
+.no-imagen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-alt);
+  color: var(--color-text-light);
+}
+
+.planta-info {
+  padding: 1.5rem;
+}
+
+.planta-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.nombre-cientifico {
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.planta-acciones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-ver,
+.btn-eliminar {
+  flex: 1;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.btn-ver {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.btn-eliminar {
+  background-color: var(--color-error);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.jardin-vacio {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.jardin-vacio-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.jardin-vacio h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.jardin-vacio p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.btn-explorar {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plantas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .plantas-grid {
+    grid-template-columns: 1fr;
+  }
+}

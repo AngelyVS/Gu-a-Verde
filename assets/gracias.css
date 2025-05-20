@@ -1,0 +1,138 @@
+/* Estilos para la página de despedida */
+
+.gracias-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  gap: 2rem;
+}
+
+.gracias-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.gracias-imagen {
+  flex: 1;
+  display: none;
+}
+
+.gracias-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.gracias-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.gracias-mensaje {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.plantas-decorativas {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.planta {
+  font-size: 3rem;
+  animation: bounce 2s infinite alternate;
+}
+
+.planta:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.planta:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.planta:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.planta:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.cita {
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.gracias-botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-volver,
+.btn-jardin,
+.btn-login {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.btn-volver {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-jardin,
+.btn-login {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .gracias-imagen {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .gracias-container {
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+
+  .plantas-decorativas {
+    gap: 1rem;
+  }
+
+  .planta {
+    font-size: 2.5rem;
+  }
+
+  .gracias-content h1 {
+    font-size: 1.8rem;
+  }
+}

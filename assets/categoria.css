@@ -1,0 +1,208 @@
+/* Estilos específicos para la página de categoría */
+
+/* Encabezado de la página */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+/* Contenedor de plantas */
+.plantas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjeta de planta */
+.planta-card {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.planta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de la planta */
+.planta-imagen {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.planta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.planta-card:hover .planta-imagen img {
+  transform: scale(1.05);
+}
+
+.no-imagen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-alt);
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+/* Información de la planta */
+.planta-card h3 {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.nombre-cientifico {
+  padding: 0 1rem 1rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.btn-pagina {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-pagina:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.pagina-actual {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Mensaje de no resultados */
+.no-resultados {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  color: var(--color-text-light);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-resultados p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Filtros (si se implementan) */
+.filtros {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+}
+
+.filtros-titulo {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.filtros-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filtro-grupo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filtro-grupo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.filtro-grupo select {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.btn-filtrar {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plantas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .planta-imagen {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .plantas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .planta-imagen {
+    height: 120px;
+  }
+
+  .planta-card h3 {
+    font-size: 1rem;
+    padding: 0.75rem 0.75rem 0.25rem;
+  }
+
+  .nombre-cientifico {
+    padding: 0 0.75rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .paginacion {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

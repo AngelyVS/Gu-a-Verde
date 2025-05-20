@@ -1,0 +1,319 @@
+/* Estilos para las páginas de preguntas */
+
+.preguntas-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.preguntas-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.preguntas-header p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+}
+
+.preguntas-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.preguntas-lista h2,
+.nueva-pregunta h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.pregunta-card {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.pregunta-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.pregunta-card h3 a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.pregunta-card h3 a:hover {
+  color: var(--color-primary);
+}
+
+.pregunta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.pregunta-preview {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.btn-ver-pregunta {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.no-preguntas {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.pregunta-form,
+.respuesta-form {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-publicar {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.login-required {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-required p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+}
+
+.btn-login,
+.btn-register {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.btn-login {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-register {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* Estilos para pregunta individual */
+.pregunta-detalle {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.pregunta-header {
+  margin-bottom: 1.5rem;
+}
+
+.pregunta-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.pregunta-contenido {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.pregunta-acciones {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-volver {
+  display: inline-block;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.respuestas-container {
+  margin-bottom: 2rem;
+}
+
+.respuestas-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.respuesta-card {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.respuesta-contenido {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.respuesta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.respuesta-calificacion {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calificacion-estrellas {
+  display: flex;
+}
+
+.estrella {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.estrella-activa {
+  color: #ffc107;
+}
+
+.estrella-inactiva {
+  color: #e0e0e0;
+}
+
+.calificacion-info {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.no-respuestas {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.nueva-respuesta {
+  margin-top: 3rem;
+}
+
+.nueva-respuesta h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+/* Añadir al final del archivo preguntas.css */
+
+/* Botones de eliminación */
+.btn-eliminar-pregunta,
+.btn-eliminar-respuesta {
+  background-color: transparent;
+  color: var(--color-error);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.btn-eliminar-pregunta:hover,
+.btn-eliminar-respuesta:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.icono-eliminar {
+  font-size: 1rem;
+}
+
+/* Animaciones para eliminar elementos */
+.pregunta-card,
+.respuesta-card {
+  transition: opacity 0.3s ease;
+}
+
+/* Ajustes responsive */
+@media (max-width: 576px) {
+  .pregunta-meta,
+  .respuesta-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .btn-eliminar-pregunta,
+  .btn-eliminar-respuesta {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .preguntas-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nueva-pregunta {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}

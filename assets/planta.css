@@ -1,0 +1,376 @@
+/* Estilos específicos para la ficha de planta individual */
+
+/* Contenedor principal */
+.ficha-planta {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Encabezado de la planta */
+.planta-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.planta-imagen-principal {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.planta-imagen-principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.no-imagen {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-alt);
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+.planta-info-basica {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.planta-info-basica h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.nombre-cientifico {
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Botón de favorito */
+.btn-favorito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-background-alt);
+  color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.btn-favorito:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-favorito.en-jardin {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.icono-flor {
+  font-size: 1.2rem;
+}
+
+.btn-login-favorito {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+/* Secciones de información */
+.planta-descripcion,
+.planta-cuidados,
+.planta-caracteristicas {
+  margin-bottom: 3rem;
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.planta-descripcion h2,
+.planta-cuidados h2,
+.planta-caracteristicas h2 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.planta-descripcion p {
+  line-height: 1.8;
+}
+
+/* Cuidados */
+.cuidados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.cuidado-item {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.cuidado-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cuidado-icono {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cuidado-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.cuidado-item p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* Características */
+.caracteristicas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.caracteristica {
+  padding: 1rem;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+}
+
+.etiqueta {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  min-width: 100px;
+}
+
+.valor {
+  color: var(--color-text-light);
+}
+
+/* Galería de imágenes (si se implementa) */
+.planta-galeria {
+  margin-bottom: 3rem;
+}
+
+.galeria-titulo {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.galeria-item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  height: 150px;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal para imagen ampliada */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Plantas relacionadas (si se implementa) */
+.plantas-relacionadas {
+  margin-top: 3rem;
+}
+
+.relacionadas-titulo {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.relacionadas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.planta-relacionada {
+  background-color: var(--color-background-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.planta-relacionada:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.relacionada-imagen {
+  height: 150px;
+  overflow: hidden;
+}
+
+.relacionada-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.planta-relacionada:hover .relacionada-imagen img {
+  transform: scale(1.05);
+}
+
+.relacionada-info {
+  padding: 1rem;
+}
+
+.relacionada-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.relacionada-info .nombre-cientifico {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planta-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planta-imagen-principal {
+    width: 100%;
+  }
+
+  .planta-info-basica {
+    width: 100%;
+    text-align: center;
+  }
+
+  .planta-info-basica h1 {
+    font-size: 2rem;
+  }
+
+  .cuidados-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .caracteristicas-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .cuidados-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planta-descripcion,
+  .planta-cuidados,
+  .planta-caracteristicas {
+    padding: 1.5rem;
+  }
+
+  .planta-descripcion h2,
+  .planta-cuidados h2,
+  .planta-caracteristicas h2 {
+    font-size: 1.5rem;
+  }
+
+  .cuidado-icono {
+    font-size: 2rem;
+  }
+}

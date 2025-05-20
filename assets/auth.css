@@ -1,0 +1,92 @@
+/* Estilos para las páginas de login y registro */
+
+.auth-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 3rem auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-background);
+}
+
+.auth-card {
+  flex: 1;
+  padding: 2rem;
+}
+
+.auth-image {
+  flex: 1;
+  display: none;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-card h1 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.btn-auth {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.auth-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--color-error);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--color-error);
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--color-success);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--color-success);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .auth-image {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .auth-container {
+    margin: 2rem 1rem;
+  }
+}
